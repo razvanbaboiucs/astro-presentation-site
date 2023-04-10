@@ -1,0 +1,56 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Digital transformation and industry",
+    description:
+      "We are experts in the digital and intelligent connection of processes, products and business models.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Customer experience and design",
+    description:
+      "We create an exceptional customer experience by combining technology and design.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Artificial intelligence and data",
+    description:
+      "We develop AI-driven solutions and enable new data-driven business models.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Cloud native: Development and operation",
+    description:
+      "We modernize the creation, testing, and deployment of software and accelerate the entire process through to operation.",
+    icon: "bx:bxs-bot",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need to start your digital transformation
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Incorporating digital technologies presents companies with complex challenges – challenges that require people able to rise to them. With BPS Hubs, you have precisely that partner. We offer your company a seamless and secure start in digital business with individual solutions tailored to your needs. Our focus is on close cooperation to ensure optimal integration into your business processes.
+  </p>
+</div>
+
+<div class="grid grid-cols-2 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
