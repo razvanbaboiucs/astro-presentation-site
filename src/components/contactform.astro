@@ -97,15 +97,8 @@ import Button from "./ui/button.astro";
       body: new URLSearchParams(formData).toString(),
     })
       .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-          result.classList.add("text-green-500");
-          result.innerHTML = json.message;
-        } else {
-          console.log(response);
-          result.classList.add("text-red-500");
-          result.innerHTML = json.message;
-        }
+        result.classList.add("text-green-500");
+        result.innerHTML = "Thank you for your submission!";
       })
       .catch((error) => {
         console.log(error);
