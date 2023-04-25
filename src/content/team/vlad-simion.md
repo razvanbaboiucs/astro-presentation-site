@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Vlad Simion"
-title: "Design & Experience Engineer"
+title: "Head of Design & Developer"
 avatar: {
     srcId: "vladSimion",
     alt: "Vlad Simion"
